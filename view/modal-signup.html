@@ -1,0 +1,50 @@
+<div class="doca">
+  <div class="modal-header">
+    <h3 class="doca-text doca-text--large doca-text--medium">Sign Up</h3>
+  </div>
+  <div class="modal-body" id="modal-body">
+    <form class="doca-gap-2 doca-flex-col doca-flex" ng-submit="submit()">
+      <div class="doca-form__field doca-form__field--required">
+        <label class="doca-form__label">Name</label>
+        <input
+          class="doca-form-control"
+          required
+          type="text"
+          id="name"
+          ng-model="formData.name"
+        />
+      </div>
+
+      <div class="doca-form__field doca-form__field--required">
+        <label class="doca-form__label">Email</label>
+        <input
+          class="doca-form-control"
+          required
+          type="email"
+          id="email"
+          ng-model="formData.email"
+        />
+      </div>
+
+      <div class="doca-form__field doca-form__field--required">
+        <label class="doca-form__label">Password</label>
+        <input
+          type="password"
+          class="doca-form-control"
+          id="password"
+          ng-model="formData.password"
+          required
+        />
+      </div>
+
+      <div style="display: flex; gap: 1rem; justify-content: flex-end; margin-top: 1rem;">
+        <button class="doca-button doca-button--secondary" type="button" ng-click="cancel()">
+          Cancel
+        </button>
+        <button class="doca-button doca-button--primary" type="submit">
+          Confirm
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

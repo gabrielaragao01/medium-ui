@@ -1,0 +1,24 @@
+<div class="doca">
+  <header class="ui-header" ng-controller="navbarController" style="background-color: #f0f0f0;"">
+    <a class=" navbar-brand" style="display: flex; justify-content: center; align-items: center;" ng-href="#">
+    <img src="../assets/images/amigo.png" alt="Logo">
+    </a>
+
+    <div class="row justify-content-center mb-3">
+      <div class="col-auto">
+        <button class="doca-button doca-button--primary" ng-if="!isUserLoggedIn"
+          ng-click="openLoginModal()">Login</button>
+      </div>
+      <div class="col-auto">
+        <button class="doca-button doca-button--secondary" ng-if="!isUserLoggedIn"
+          ng-click="openSignupModal()">Sign-up</button>
+      </div>
+      <div class="col-auto">
+        <button class="doca-button doca-button--secondary" ng-if="isUserLoggedIn"
+          ng-click="userLogout()">Logout</button>
+      </div>
+    </div>
+
+</div>
+</header>
+</div>

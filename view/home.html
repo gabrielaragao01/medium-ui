@@ -1,0 +1,35 @@
+<div class="doca">
+    <navbar></navbar>
+    <!-- Cabeçalho da Home -->
+    <div class="row text-center mb-4">
+        <h1 class="display-2 fw-bold "></h1>
+    </div>
+
+    <!-- Lista de posts -->
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="doca-card" ng-repeat="post in posts">
+                <div class="doca-card__content">
+                    <h1 class="doca-card__title">{{ post.title }}</h1>
+                    <p class="doca-card__subtitle">{{ post.summary }}</p>
+                </div>
+                <div class="doca-page__subtitle">
+                    <small>Published in: {{ post.created_at | date:'dd/MM/yyyy' }}</small>
+                    <small>Likes: {{ post.total_likes }}</small>
+                    <a class="doca-button doca-button--secondary" ng-href="#!/post/{{post.id}}">View</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Botão de Create -->
+    <div class="row justify-content-center mt-3">
+        <!-- Botão de Create Fixo -->
+        <div class="fixed-create-button">
+            <button class="doca-button doca-button--rounded doca-button--success" ng-click="openCreateModal()"
+                style="font-size: 16px;">
+                +
+            </button>
+        </div>
+    </div>
+</div>

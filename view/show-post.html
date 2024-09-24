@@ -1,0 +1,42 @@
+<div class="doca" ng-if="!loading">
+
+  <!-- Detalhes do Post -->
+  <div class="row justify-content-center flex-grow-1">
+    <div class="col-md-8">
+      <div class="doca-card"
+        style="height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
+        <div class="doca-card__content">
+          <h3 class="doca-card__author">Author: {{ post.author }}</h3>
+          <!-- Linha pequena entre autor e título -->
+          <hr style="width: 50%; margin: 10px auto; border: 1px solid #ccc;">
+          <h1 class="doca-card__title">{{ post.title }}</h1>
+          <p class="doca-card__subtitle">{{ post.content }}</p>
+        </div>
+        <div class="doca-page__subtitle mt-4 d-flex justify-content-between">
+          <small>Publicado em: {{ post.created_at | date:'dd/MM/yyyy' }}</small>
+          <small>Likes: {{ post.total_likes }}</small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Botão de Like -->
+  <div class="row justify-content-center mt-4">
+    <div class="col-auto">
+      <button class="doca-button doca-button--primary" ng-click="like()">
+        <i
+          ng-class="{doca-button doca-button--danger : post.is_liked, doca-button doca-button--primary: !post.is_liked}">
+        </i>
+        {{ post.is_liked ? 'Dislike' : 'Like' }}
+      </button>
+    </div>
+  </div>
+
+  <!-- Botão de Cancelar -->
+  <div class="row justify-content-center mt-4">
+    <div class="col-auto">
+      <button class="doca-button doca-button--small doca-button--green"
+        style="display: flex; flex-direction: column; justify-content: space-between;" ui-sref="home">Return</button>
+    </div>
+  </div>
+</div>

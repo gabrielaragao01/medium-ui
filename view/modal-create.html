@@ -1,0 +1,43 @@
+<div class="doca">
+  <div class="modal-header" style="text-align: center;">
+    <h3 class="doca-text doca-text--large doca-text--medium">Create Post</h3>
+  </div>
+  <div class="modal-body" style="padding: 20px;">
+    <form class="doca-gap-2 doca-flex-col doca-flex" ng-submit="submit()">
+
+      <!-- Campo Title -->
+      <div class="doca-form__field doca-form__field--required" style="margin-bottom: 15px;">
+        <label class="doca-form__label">Title</label>
+        <textarea class="doca-form-control" id="title" ng-model="postData.title" maxLength="255"
+          placeholder="Insira o título..." rows="2" style="padding: 10px; border-radius: 5px;"></textarea>
+        <span class="doca-form__feedback">{{ postData.title.length || 0 }}/255</span>
+      </div>
+
+      <!-- Campo Summary -->
+      <div class="doca-form__field doca-form__field--required" style="margin-bottom: 15px;">
+        <label class="doca-form__label">Summary</label>
+        <textarea class="doca-form-control" id="summary" ng-model="postData.summary" maxLength="255"
+          placeholder="Resumo..." rows="2" style="padding: 10px; border-radius: 5px;"></textarea>
+        <span class="doca-form__feedback">{{ postData.summary.length || 0 }}/255</span>
+      </div>
+
+      <!-- Campo Content -->
+      <div class="doca-form__field doca-form__field--required" style="margin-bottom: 15px;">
+        <label class="doca-form__label">Content</label>
+        <textarea class="doca-form-control" id="content" ng-model="postData.content" maxLength="999"
+          placeholder="Conteúdo..." rows="4" style="padding: 10px; border-radius: 5px;"></textarea>
+        <span class="doca-form__feedback">{{ postData.content.length || 0 }}/255</span>
+      </div>
+
+      <!-- Botões de Enviar e Cancelar -->
+      <div class="doca-form__actions" style="display: flex; justify-content: center; gap: 10px; margin-top: 20px;">
+        <button class="doca-button doca-button--green" type="submit" style="flex: 1;">
+          Create
+        </button>
+        <button class="doca-button doca-button--secondary" type="button" ng-click="cancel()" style="flex: 1;">
+          Cancel
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
