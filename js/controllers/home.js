@@ -41,7 +41,7 @@ myApp.controller("homeController", [
     };
 
     // Inicializa o carregamento da primeira página
-    loadPoinitsts($scope.page);
+    loadPosts($scope.page);
 
     // Função para detectar scroll e carregar mais posts
     const onScroll = () => {

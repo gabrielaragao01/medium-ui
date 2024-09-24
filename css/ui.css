@@ -1,0 +1,129 @@
+.ui-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e0e0e0;
+  height: 12vh;
+  padding: 3vw;
+}
+
+.ui-logo-header {
+  height: 3rem;
+  width: 3rem;
+}
+
+.justify-self-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.modal {
+  display: block;
+}
+
+.modal-content {
+  background-clip: padding-box;
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  outline: 0 none;
+  position: relative;
+}
+.modal-dialog {
+  z-index: 2200;
+}
+.modal-body {
+  padding: 20px 30px 30px 30px;
+}
+
+.modal-backdrop.white-backdrop {
+  opacity: 1;
+  background-color: #fff;
+}
+
+.modal-backdrop.gray-backdrop {
+  opacity: 1;
+  background-color: #000000;
+}
+
+.modal.white-backdrop {
+  opacity: 1;
+  background-color: #fff;
+}
+
+.modal-backdrop.dark-backdrop {
+  opacity: 0.8;
+}
+
+.white-backdrop .modal-content {
+  border: none;
+  box-shadow: none;
+}
+
+.modal.modal-dark {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.doca-modal-md .modal-dialog {
+  width: 50rem;
+}
+
+.doca-modal {
+  top: 0 !important;
+  border-radius: 0 !important;
+}
+
+.navbar-brand img {
+  width: 100px;
+  height: 50px;
+}
+
+.doca-card {
+  margin-bottom: 20px;
+  padding: 20px;
+  border: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+}
+
+.doca-card__title.ng-binding {
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.doca-card__subtitle.ng-binding {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.doca-page__subtitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.doca-button--small {
+  font-size: 14px;
+  margin-left: auto;
+  padding: 5px 10px;
+}
+.doca-button--small:hover {
+  background-color: #f0f0f0;
+}
+
+.doca-page__subtitle small {
+  display: inline-block;
+  font-size: 10px;
+  color: gray;
+}
+
+.fixed-create-button {
+  position: fixed;
+  bottom: 40px;
+  left: 70px;
+  z-index: 1000;
+}
